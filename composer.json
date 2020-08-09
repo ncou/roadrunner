@@ -34,7 +34,11 @@
     },
     "extra": {
         "chiron": {
+            "providers": [
+                "Chiron\\RoadRunner\\Provider\\RrServiceProvider"
+            ],
             "bootloaders": [
+                "Chiron\\RoadRunner\\Bootloader\\RrDispatcherBootloader",
                 "Chiron\\RoadRunner\\Bootloader\\RrCommandBootloader"
             ]
         }
