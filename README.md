@@ -56,3 +56,5 @@ git add .
 ```
 
 Easy peasy! Now you just have to code.
+
+[getcomposer]:https://getcomposer.org/download/
