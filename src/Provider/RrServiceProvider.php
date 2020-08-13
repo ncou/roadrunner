@@ -26,7 +26,7 @@ class RrServiceProvider implements ServiceProviderInterface
     /**
      * Register Chiron system services.
      *
-     * @param \Chiron\Container\Container $container A DI container implementing ArrayAccess and container-interop.
+     * @param \Chiron\Container\BindingInterface $container A DI container implementing ArrayAccess and container-interop.
      */
     public function register(BindingInterface $container): void
     {

@@ -20,8 +20,8 @@ final class RrDispatcher extends AbstractDispatcher
     }
 
     /**
-     * @param \Chiron\Http\Http $http
-     * @param \Spiral\RoadRunner\PSR7Client $client
+     * @param \Chiron\Http\Http                 $http
+     * @param \Spiral\RoadRunner\PSR7Client     $client
      * @param \Chiron\ErrorHandler\ErrorHandler $errorHandler
      */
     protected function perform(Http $http, PSR7Client $client, ErrorHandler $errorHandler): void
