@@ -1,12 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Chiron\RoadRunner\Command;
 
-use Chiron\Console\AbstractCommand;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use Chiron\Boot\Directories;
+use Chiron\Console\AbstractCommand;
 use Chiron\Filesystem\Filesystem;
 
 final class RrInstallCommand extends AbstractCommand
@@ -28,9 +27,9 @@ final class RrInstallCommand extends AbstractCommand
 
     private function copyRrConfigFile(Filesystem $filesystem, Directories $directories): void
     {
-        $this->message("Copy Roadrunner configuration file...");
+        $this->message('Copy Roadrunner configuration file...');
 
-        $source = __DIR__.'/../../config/.rr.yaml.dist';
+        $source = __DIR__ . '/../../config/.rr.yaml.dist';
         $destination = $directories->get('@root/.rr.yaml');
         // copy and overwrite existing rr config file.
         $filesystem->copy($source, $destination);
@@ -40,9 +39,10 @@ final class RrInstallCommand extends AbstractCommand
 
     private function downloadRrBinary(Directories $directories): void
     {
-        $this->message("Download Roadrunner server binary...");
+        $this->message('Download Roadrunner server binary...');
 
-        $commandLine = sprintf('"%s" get-binary --location "%s"',
+        $commandLine = sprintf(
+            '"%s" get-binary --location "%s"',
             $directories->get('@vendor/bin/rr'),
             $directories->get('@root/bin')
         );

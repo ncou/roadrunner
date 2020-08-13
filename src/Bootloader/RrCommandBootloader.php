@@ -1,10 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Chiron\RoadRunner\Bootloader;
 
-use Chiron\Boot\Directories;
 use Chiron\Bootload\AbstractBootloader;
-use Chiron\PublishableCollection;
 use Chiron\Console\Console;
 use Chiron\RoadRunner\Command\RrInstallCommand;
 use Chiron\RoadRunner\Command\RrServeCommand;

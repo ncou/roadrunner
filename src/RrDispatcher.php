@@ -4,28 +4,25 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner;
 
+use Chiron\Dispatcher\AbstractDispatcher;
 use Chiron\ErrorHandler\ErrorHandler;
 use Chiron\Http\Http;
 use Spiral\RoadRunner\PSR7Client;
 use Throwable;
-use Chiron\Dispatcher\AbstractDispatcher;
 
 //https://github.com/spiral/framework/blob/master/src/Http/RrDispatcher.php
 
 final class RrDispatcher extends AbstractDispatcher
 {
-    /**
-     * {@inheritdoc}
-     */
     public function canDispatch(): bool
     {
-        return php_sapi_name() === 'cli' && env('RR') !== null;
+        return PHP_SAPI === 'cli' && env('RR') !== null;
     }
 
     /**
-     * @param Http         $http
-     * @param PSR7Client   $client
-     * @param ErrorHandler $errorHandler
+     * @param \Chiron\Http\Http $http
+     * @param \Spiral\RoadRunner\PSR7Client $client
+     * @param \Chiron\ErrorHandler\ErrorHandler $errorHandler
      */
     protected function perform(Http $http, PSR7Client $client, ErrorHandler $errorHandler): void
     {

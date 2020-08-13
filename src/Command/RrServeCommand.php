@@ -1,12 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Chiron\RoadRunner\Command;
 
-use Chiron\Console\AbstractCommand;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use Chiron\Boot\Directories;
+use Chiron\Console\AbstractCommand;
+use Symfony\Component\Console\Input\InputOption;
 
 final class RrServeCommand extends AbstractCommand
 {
@@ -21,7 +21,7 @@ final class RrServeCommand extends AbstractCommand
 
     public function perform(Directories $directories)
     {
-        $this->message("Roadrunner Server Starting...");
+        $this->message('Roadrunner Server Starting...');
         $this->info('Quit the server with CTRL-C or COMMAND-C.');
 
         $rrBinary = $this->getRrBinary($directories);
@@ -41,10 +41,10 @@ final class RrServeCommand extends AbstractCommand
     private function getRrBinary(Directories $directories): string
     {
         if (self::isWindowsOs()) {
-            return $directories->get("@root\\bin\\rr.exe");
+            return $directories->get('@root\bin\rr.exe');
         }
 
-        return $directories->get("@root/bin/rr");
+        return $directories->get('@root/bin/rr');
     }
 
     private static function isWindowsOs(): bool

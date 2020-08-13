@@ -11,7 +11,6 @@ namespace Chiron\RoadRunner\Provider;
 //use Chiron\Http\Middleware\ErrorHandlerMiddleware;
 use Chiron\Bootload\ServiceProvider\ServiceProviderInterface;
 use Chiron\Container\BindingInterface;
-use Chiron\Container\Container;
 use Closure;
 use Spiral\Goridge\StreamRelay;
 use Spiral\RoadRunner\PSR7Client;
@@ -27,7 +26,7 @@ class RrServiceProvider implements ServiceProviderInterface
     /**
      * Register Chiron system services.
      *
-     * @param Container $container A DI container implementing ArrayAccess and container-interop.
+     * @param \Chiron\Container\Container $container A DI container implementing ArrayAccess and container-interop.
      */
     public function register(BindingInterface $container): void
     {
