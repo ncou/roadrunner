@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner;
 
-use Chiron\Dispatcher\AbstractDispatcher;
+use Chiron\Core\Dispatcher\AbstractDispatcher;
 use Chiron\ErrorHandler\ErrorHandler;
 use Chiron\Http\Http;
 use Spiral\RoadRunner\PSR7Client;
@@ -12,6 +12,7 @@ use Throwable;
 
 //https://github.com/spiral/framework/blob/master/src/Http/RrDispatcher.php
 
+// TODO : renommer la classe en RoadrunnerDispatcher
 final class RrDispatcher extends AbstractDispatcher
 {
     public function canDispatch(): bool
