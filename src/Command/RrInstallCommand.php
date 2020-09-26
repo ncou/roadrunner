@@ -6,7 +6,7 @@ use Chiron\Console\AbstractCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Chiron\Boot\Directories;
+use Chiron\Core\Directories;
 use Chiron\Filesystem\Filesystem;
 
 final class RrInstallCommand extends AbstractCommand
