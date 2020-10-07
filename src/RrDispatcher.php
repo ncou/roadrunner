@@ -33,7 +33,7 @@ final class RrDispatcher extends AbstractDispatcher
         while ($request = $client->acceptRequest()) {
             // TODO : c'est quoi l'utilité de ce code (le try/catch Throwable) versus le code qui est déjà présent dans le ErrorHandlerMiddleware ????
             try {
-                $response = $http->run($request);
+                $response = $http->handle($request);
             } catch (Throwable $e) {
                 // TODO : il faudrait plutot utiliser le RegisterErrorHandler::renderException($e) pour générer le body de la réponse !!!!
                 $response = $errorHandler->renderException($e, $request, $verbose);
