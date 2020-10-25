@@ -8,8 +8,7 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner\Provider;
 
-//use Chiron\Http\Middleware\ErrorHandlerMiddleware;
-use Chiron\Bootload\ServiceProvider\ServiceProviderInterface;
+use Chiron\Core\Container\Provider\ServiceProviderInterface;
 use Chiron\Container\BindingInterface;
 use Closure;
 use Spiral\Goridge\StreamRelay;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\RoadRunner\Bootloader;
 
 use Chiron\Core\Directories;
-use Chiron\Bootload\AbstractBootloader;
+use Chiron\Core\Container\Bootloader\AbstractBootloader;
 use Chiron\Console\Console;
 use Chiron\RoadRunner\Command\RrInstallCommand;
 use Chiron\RoadRunner\Command\RrServeCommand;

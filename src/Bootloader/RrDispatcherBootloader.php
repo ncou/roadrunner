@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\RoadRunner\Bootloader;
 
 use Chiron\Application;
-use Chiron\Bootload\AbstractBootloader;
+use Chiron\Core\Container\Bootloader\AbstractBootloader;
 use Chiron\Container\FactoryInterface;
 use Chiron\RoadRunner\RrDispatcher;
 
