@@ -6,7 +6,7 @@ namespace Chiron\RoadRunner;
 
 use Chiron\Core\Dispatcher\AbstractDispatcher;
 use Chiron\ErrorHandler\HttpErrorHandler;
-use Chiron\Http\HttpHandler;
+use Chiron\Http\Http;
 use Spiral\RoadRunner\PSR7Client;
 use Throwable;
 
@@ -25,7 +25,7 @@ final class RrDispatcher extends AbstractDispatcher
      * @param \Spiral\RoadRunner\PSR7Client     $client
      * @param \Chiron\ErrorHandler\ErrorHandler $errorHandler
      */
-    protected function perform(HttpHandler $http, PSR7Client $client, HttpErrorHandler $errorHandler): void
+    protected function perform(Http $http, PSR7Client $client, HttpErrorHandler $errorHandler): void
     {
         // TODO : code à améliorer pour savoir si on est en debug ou non et donc si les exceptions doivent afficher le détail (stacktrace notamment) !!!!
         $verbose = true;
