@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\RoadRunner;
 
 use Chiron\Core\Dispatcher\AbstractDispatcher;
-use Chiron\ErrorHandler\HttpErrorHandler;
+use Chiron\Http\ErrorHandler\HttpErrorHandler;
 use Chiron\Http\Http;
 use Spiral\RoadRunner\PSR7Client;
 use Throwable;
