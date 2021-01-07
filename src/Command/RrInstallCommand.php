@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner\Command;
 
-use Chiron\Boot\Directories;
-use Chiron\Console\AbstractCommand;
+use Chiron\Core\Directories;
+use Chiron\Core\Console\AbstractCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Chiron\Filesystem\Filesystem;
+
+// TODO : utiliser ce bout de code pour détecter le binaire rr ???? https://github.com/jolicode/JoliNotif/blob/master/src/Notifier/CliBasedNotifier.php#L106
 
 final class RrInstallCommand extends AbstractCommand
 {
