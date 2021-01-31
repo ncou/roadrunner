@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\RoadRunner\Command;
 
 use Chiron\Core\Directories;
-use Chiron\Core\Console\AbstractCommand;
+use Chiron\Core\Command\AbstractCommand;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
