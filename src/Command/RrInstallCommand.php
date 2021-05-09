@@ -11,6 +11,8 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Chiron\Filesystem\Filesystem;
 
+// TODO : utiliser symfony/process pour executer la ligne de commande plutot que l'instruction passthru() !!!
+
 // TODO : utiliser ce bout de code pour détecter le binaire rr ???? https://github.com/jolicode/JoliNotif/blob/master/src/Notifier/CliBasedNotifier.php#L106
 
 final class RrInstallCommand extends AbstractCommand
