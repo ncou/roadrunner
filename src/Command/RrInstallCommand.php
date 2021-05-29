@@ -36,7 +36,7 @@ final class RrInstallCommand extends AbstractCommand
     {
         $this->message('Copy Roadrunner configuration file...');
 
-        $source = __DIR__ . '/../../config/.rr.yaml.dist';
+        $source = __DIR__ . '/../../resources/.rr.yaml.dist';
         $destination = $directories->get('@root/.rr.yaml');
         // copy and overwrite existing rr config file.
         $filesystem->copy($source, $destination);

@@ -52,6 +52,7 @@ final class RrServeCommand extends AbstractCommand
         return $directories->get('@root/bin/rr');
     }
 
+    // TODO : Mettre cette fonction dans une classe dans le package chiron/support sous le nom System::class ou OperatingSystem::class
     private static function isWindowsOs(): bool
     {
         return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';

@@ -36,7 +36,8 @@ class RrServiceProvider implements ServiceProviderInterface
     private function psr7Client(): PSR7Client
     {
         $relay = new StreamRelay(STDIN, STDOUT);
+        $worker = new Worker($relay);
 
-        return new PSR7Client(new Worker($relay));
+        return new PSR7Client($worker);
     }
 }
