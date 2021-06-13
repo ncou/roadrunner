@@ -37,7 +37,7 @@
                 "Chiron\\RoadRunner\\Provider\\RrServiceProvider"
             ],
             "bootloaders": [
-                "Chiron\\RoadRunner\\Bootloader\\RrDispatcherBootloader",
+                "Chiron\\RoadRunner\\Bootloader\\RrEngineBootloader",
                 "Chiron\\RoadRunner\\Bootloader\\RrCommandBootloader"
             ]
         }
