@@ -6,7 +6,7 @@ namespace Chiron\RoadRunner\Bootloader;
 
 use Chiron\Application;
 use Chiron\Core\Container\Bootloader\AbstractBootloader;
-use Chiron\Container\FactoryInterface;
+use Chiron\Injector\FactoryInterface;
 use Chiron\RoadRunner\RrEngine;
 
 final class RrEngineBootloader extends AbstractBootloader
