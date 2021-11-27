@@ -22,6 +22,9 @@ final class RrEngine extends AbstractEngine
     public function isActive(): bool
     {
         return PHP_SAPI === 'cli' && env('RR') !== null; // env('RR_MODE') === 'http' // eventuellement utiliser la constante pour 'http' ===> Spiral\RoadRunner\Environment\Mode::MODE_HTTP
+
+        /** @link https://roadrunner.dev/docs/php-environment */
+        //https://github.com/spiral/roadrunner-laravel/blob/master/src/Dumper/Dumper.php#L102
     }
 
     protected function perform(RrListener $roadrunner, Http $http): void
