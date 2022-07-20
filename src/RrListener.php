@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner;
 
-use Chiron\Core\Dispatcher\AbstractDispatcher;
-use Chiron\Http\ErrorHandler\HttpErrorHandler;
-use Chiron\Http\Http;
 use Spiral\RoadRunner\PSR7Client;
-use Throwable;
 
 // TODO : renommer la classe en RoadRunnerListener
 final class RrListener

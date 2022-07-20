@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace Chiron\RoadRunner\Provider;
 
-use Chiron\Core\Container\Provider\ServiceProviderInterface;
 use Chiron\Container\BindingInterface;
+use Chiron\Core\Container\Provider\ServiceProviderInterface;
 use Closure;
 use Spiral\Goridge\StreamRelay;
 use Spiral\RoadRunner\PSR7Client;

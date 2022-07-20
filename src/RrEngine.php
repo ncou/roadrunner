@@ -5,11 +5,7 @@ declare(strict_types=1);
 namespace Chiron\RoadRunner;
 
 use Chiron\Core\Engine\AbstractEngine;
-use Chiron\Http\ErrorHandler\HttpErrorHandler;
-use Psr\Http\Message\ServerRequestInterface;
 use Chiron\Http\Http;
-use Spiral\RoadRunner\PSR7Client;
-use Throwable;
 
 //https://github.com/spiral/framework/blob/master/src/Http/RrDispatcher.php
 //https://github.com/spiral/framework/blob/d17c175e85165456fbd2d841c8e81165e371675c/src/Framework/Http/RrDispatcher.php#L28
